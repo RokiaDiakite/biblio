@@ -14,6 +14,12 @@
     </head>
     <body>
         <div class="contenue">
+            <?php if (isset($_GET['message'])): ?>
+            <div class="alert-success">
+                <?= htmlspecialchars($_GET['message']) ?>
+            </div>
+            <?php endif; ?>
+
             <a  class="lien" href="ajouter.php">Cliquer pour ajouter un livre</a>
             <h1>LISTE DE TOUS LES LIVRES</h1>
             <table>

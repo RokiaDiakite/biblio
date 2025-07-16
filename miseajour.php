@@ -8,10 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_GET["id"])) {
 
     $stmt = $conn->prepare("UPDATE livre SET titre = ?, dat_sortie = ? WHERE id = ?");
     if ($stmt->execute([$titre, $date, $id])) {
-        header("Location: index.php");
+        header("Location: index.php?message=Livre modifié avec succès !");
         exit();
     } else {
-        echo "Erreur lors de la mise à jour.";
+        echo "Livre non modifié !";
     }
 }
+
+
 ?>
