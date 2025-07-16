@@ -27,6 +27,13 @@ if (!$livre) {
     <div class="contenue">
         <a class="lien" href="index.php"> Retour à la liste de tous les livres</a>
         <h1>Modifier un livre</h1>
+        <?php if (isset($_GET['erreur'])): ?>
+            <div class="echou">
+                <?= htmlspecialchars($_GET['erreur']) ?>
+            </div>
+        <?php endif; ?>
+
+
         <form action="miseajour.php?id=<?= $livre['id'] ?>" method="post">
             <input type="text" name="titre" placeholder="Titre du livre" value="<?= htmlspecialchars($livre['titre']) ?>" required>
             <input type="date" name="dat_sortie" value="<?= $livre['dat_sortie'] ?>" required>

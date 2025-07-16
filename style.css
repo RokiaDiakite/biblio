@@ -1,6 +1,5 @@
 /* style.css */
 
-@import url('images.jpeg');
 
 body {
     font-family: 'Segoe UI', sans-serif;
@@ -105,7 +104,7 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #218838;
 } 
-.alert-success {
+.recu {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
@@ -113,4 +112,13 @@ form input[type="submit"]:hover {
   margin-bottom: 20px;
   border-radius: 8px;
   font-weight: 500;
+}
+.echou {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 18px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-weight: bold;
 }

@@ -9,13 +9,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Ma bibliothèque</title>
+        <link rel="icon" href="favicon.ico">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="contenue">
             <?php if (isset($_GET['message'])): ?>
-            <div class="alert-success">
+            <div class="recu">
                 <?= htmlspecialchars($_GET['message']) ?>
             </div>
             <?php endif; ?>
